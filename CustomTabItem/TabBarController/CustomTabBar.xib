@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6t4-lz-HHb" customClass="CustomTabBar" customModule="CustomTabItem" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="584" height="87"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="nGQ-t4-Mlq">
+                    <rect key="frame" x="0.0" y="0.0" width="584" height="87"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1R-di-WoU" userLabel="separate">
+                    <rect key="frame" x="0.0" y="0.0" width="584" height="1"/>
+                    <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="pQu-2K-wLf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Xge-r2-alW"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Xge-r2-alW" firstAttribute="trailing" secondItem="nGQ-t4-Mlq" secondAttribute="trailing" id="00B-Zj-0CV"/>
+                <constraint firstAttribute="top" secondItem="nGQ-t4-Mlq" secondAttribute="top" id="1Qh-bd-8Qk"/>
+                <constraint firstItem="Q1R-di-WoU" firstAttribute="top" secondItem="6t4-lz-HHb" secondAttribute="top" id="5BU-t3-vRe"/>
+                <constraint firstItem="nGQ-t4-Mlq" firstAttribute="leading" secondItem="Xge-r2-alW" secondAttribute="leading" id="gtr-9K-8QI"/>
+                <constraint firstItem="nGQ-t4-Mlq" firstAttribute="bottom" secondItem="6t4-lz-HHb" secondAttribute="bottom" id="lP6-b4-wQs"/>
+                <constraint firstAttribute="trailing" secondItem="Q1R-di-WoU" secondAttribute="trailing" id="oli-4A-fZL"/>
+                <constraint firstItem="Q1R-di-WoU" firstAttribute="leading" secondItem="6t4-lz-HHb" secondAttribute="leading" id="yKk-5I-Qdk"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomStack" destination="nGQ-t4-Mlq" id="W3b-J4-OOF"/>
+            </connections>
+            <point key="canvasLocation" x="-133.33333333333334" y="-120.20089285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
