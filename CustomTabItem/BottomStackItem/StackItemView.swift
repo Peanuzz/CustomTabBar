@@ -26,6 +26,7 @@ public struct BottomStackItem {
 
 protocol StackItemViewDelegate: class {
   func handleTapSelected(_ view: StackItemView)
+  func handleDoubleTapSelected(_ view: StackItemView)
 }
 
 class StackItemView: UIView {
@@ -44,6 +45,7 @@ class StackItemView: UIView {
   override func awakeFromNib() {
     super.awakeFromNib()
     addTapGesture()
+    addDoubleTapGesture()
     setupIndicator()
   }
   
@@ -105,10 +107,22 @@ extension StackItemView {
     let tapGesture = UITapGestureRecognizer(target: self,
                                             action: #selector(handleTapSelected(_:)))
     addGestureRecognizer(tapGesture)
-    }
+  }
+  
+  func addDoubleTapGesture() {
+    let tapGesture = UITapGestureRecognizer(target: self,
+                                            action: #selector(handleDoubleTapSelected(_:)))
+    tapGesture.numberOfTapsRequired = 2
+    addGestureRecognizer(tapGesture)
+  }
   
   @objc
   func handleTapSelected(_ sender: UITapGestureRecognizer) {
     delegate?.handleTapSelected(self)
+  }
+  
+  @objc
+  func handleDoubleTapSelected(_ sender: UITapGestureRecognizer) {
+    delegate?.handleDoubleTapSelected(self)
   }
 }

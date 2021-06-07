@@ -50,6 +50,7 @@ class TabBarViewController: UITabBarController {
     customTabBar.translatesAutoresizingMaskIntoConstraints = false
     customTabBar.clipsToBounds = true
     customTabBar.itemTapped = changeTab
+    customTabBar.tabBarController = self
     view.addSubview(customTabBar)
     // Add positioning constraints to place the nav menu right where the tab bar should be
     let safeArae = view.safeAreaLayoutGuide

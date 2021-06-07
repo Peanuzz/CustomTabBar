@@ -31,6 +31,8 @@
 		19644C2E2666A5A5008E9F8F /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19644C2D2666A5A5008E9F8F /* NotificationViewController.swift */; };
 		19644C322666A5B5008E9F8F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19644C312666A5B5008E9F8F /* SettingViewController.swift */; };
 		19644C382666C107008E9F8F /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19644C372666C107008E9F8F /* Order.storyboard */; };
+		19644C6C266DF4A2008E9F8F /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19644C6B266DF4A2008E9F8F /* OrderListViewController.swift */; };
+		19644C6F266DF4AE008E9F8F /* OrderList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19644C6E266DF4AE008E9F8F /* OrderList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		19644C2D2666A5A5008E9F8F /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		19644C312666A5B5008E9F8F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		19644C372666C107008E9F8F /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
+		19644C6B266DF4A2008E9F8F /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
+		19644C6E266DF4AE008E9F8F /* OrderList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		19107ED32660EC4100975DB5 /* Children */ = {
 			isa = PBXGroup;
 			children = (
+				19644C6A266DF401008E9F8F /* OrderList */,
 				19644C222666A56B008E9F8F /* LandingViewController.swift */,
 				19107ED52660EC5D00975DB5 /* Landing.storyboard */,
 				19644C262666A57C008E9F8F /* ExploreViewController.swift */,
@@ -151,6 +156,15 @@
 				19107EE12660EC9400975DB5 /* Setting.storyboard */,
 			);
 			path = Children;
+			sourceTree = "<group>";
+		};
+		19644C6A266DF401008E9F8F /* OrderList */ = {
+			isa = PBXGroup;
+			children = (
+				19644C6B266DF4A2008E9F8F /* OrderListViewController.swift */,
+				19644C6E266DF4AE008E9F8F /* OrderList.storyboard */,
+			);
+			path = OrderList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19107E86265F9B3100975DB5 /* LaunchScreen.storyboard in Resources */,
+				19644C6F266DF4AE008E9F8F /* OrderList.storyboard in Resources */,
 				19107EE22660EC9400975DB5 /* Setting.storyboard in Resources */,
 				19107EDF2660EC8B00975DB5 /* Notification.storyboard in Resources */,
 				19107E83265F9B3100975DB5 /* Assets.xcassets in Resources */,
@@ -240,6 +255,7 @@
 				19644C232666A56B008E9F8F /* LandingViewController.swift in Sources */,
 				19107EE62660F43300975DB5 /* Unwrapped.swift in Sources */,
 				19107E7A265F9B2E00975DB5 /* AppDelegate.swift in Sources */,
+				19644C6C266DF4A2008E9F8F /* OrderListViewController.swift in Sources */,
 				19644C322666A5B5008E9F8F /* SettingViewController.swift in Sources */,
 				19644C2A2666A592008E9F8F /* OrderViewController.swift in Sources */,
 				19107EA9265FA01B00975DB5 /* StackItemView.swift in Sources */,

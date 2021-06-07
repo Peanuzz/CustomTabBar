@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tuV-Vl-xbU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D4f-Sr-22H">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -11,29 +11,60 @@
         <!--Order View Controller-->
         <scene sceneID="ruG-ot-FEx">
             <objects>
-                <viewController storyboardIdentifier="Order" id="tuV-Vl-xbU" customClass="OrderViewController" customModule="CustomTabItem" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tuV-Vl-xbU" customClass="OrderViewController" customModule="CustomTabItem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Bh-Zk-1tK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBA-cC-KSf">
-                                <rect key="frame" x="179" y="438" width="44" height="21"/>
+                                <rect key="frame" x="185" y="437.5" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPf-mH-fyB">
+                                <rect key="frame" x="173" y="466" width="68" height="30"/>
+                                <state key="normal" title="Order List"/>
+                                <connections>
+                                    <action selector="tapOrderList" destination="tuV-Vl-xbU" eventType="touchUpInside" id="haz-wN-4cT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PyT-fA-pxJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VBA-cC-KSf" firstAttribute="centerX" secondItem="PyT-fA-pxJ" secondAttribute="centerX" constant="-6" id="dcS-8K-k6P"/>
-                            <constraint firstItem="VBA-cC-KSf" firstAttribute="centerY" secondItem="PyT-fA-pxJ" secondAttribute="centerY" constant="-4.5" id="emK-2V-WPH"/>
+                            <constraint firstItem="VBA-cC-KSf" firstAttribute="centerY" secondItem="4Bh-Zk-1tK" secondAttribute="centerY" id="1Mw-DU-6Qx"/>
+                            <constraint firstItem="VBA-cC-KSf" firstAttribute="centerX" secondItem="4Bh-Zk-1tK" secondAttribute="centerX" id="SJF-nh-VME"/>
+                            <constraint firstItem="hPf-mH-fyB" firstAttribute="bottom" secondItem="VBA-cC-KSf" secondAttribute="bottom" constant="37.5" id="md8-nK-rLJ"/>
+                            <constraint firstItem="hPf-mH-fyB" firstAttribute="centerX" secondItem="VBA-cC-KSf" secondAttribute="centerX" id="tYj-OS-7db"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="urF-84-ScF"/>
+                    <connections>
+                        <outlet property="orderListButton" destination="hPf-mH-fyB" id="Nnq-21-IQJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpj-KK-3Dp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="148" y="60"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q3Q-ov-mMr">
+            <objects>
+                <navigationController storyboardIdentifier="Order" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="D4f-Sr-22H" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2xe-8E-WJq">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tuV-Vl-xbU" kind="relationship" relationship="rootViewController" id="ufc-dm-Q5B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnB-Nf-399" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626" y="60"/>
         </scene>
     </scenes>
     <resources>

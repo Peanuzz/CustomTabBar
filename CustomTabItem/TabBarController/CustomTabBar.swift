@@ -10,6 +10,7 @@ import UIKit
 class CustomTabBar: UIView {
   
   @IBOutlet weak var bottomStack: UIStackView!
+  weak var tabBarController: UITabBarController?
   
   var itemTapped: ((_ tab: Int) -> Void)?
   var activeItem: Int = 0
@@ -56,6 +57,13 @@ class CustomTabBar: UIView {
 }
 
 extension CustomTabBar: StackItemViewDelegate {
+  func handleDoubleTapSelected(_ view: StackItemView) {
+    guard let controllers = tabBarController?.viewControllers,
+          let navigationController = controllers[view.tag] as? UINavigationController
+    else { return }
+    navigationController.popToRootViewController(animated: true)
+  }
+  
   func handleTapSelected(_ view: StackItemView) {
     itemTapped?(view.tag)
     switchTab(from: activeItem, to: view.tag)
